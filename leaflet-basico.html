@@ -39,6 +39,19 @@
     }
     </script>
 
+    L.marker([41.3954, 2.16859]).addTo(map);
+    L.marker([41.3954, 2.16859]).addTo(map).bindPopup('Hola punto');
+    L.marker([41.3954, 2.16859]).addTo(map).bindPopup('Hola punto').openPopup();
+
+    var punto = L.circleMarker([41.3954, 2.16859],{
+        color: '#ffffff',
+        fillColor: '#00ff00',
+        fillOpacity: 0.9,
+        radius: 8
+         });
+punto.addTo(map);
+punto.bindPopup('Hola punto');
+punto.openPopup();
 
 
     </head> 

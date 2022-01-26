@@ -1,0 +1,56 @@
+<html lang="es">
+    <head>
+    <title>Leaflet ejemplo plugin</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="autor"/>
+      <meta name="description" content="descripción página">
+      <meta name="robots" content="index,follow">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+      <!--Plugin OSMGeocode -->
+      <!--si descargamos 3.3 -->
+      <!--<script src="js/Control.OSMGeocoder.js"></script>-->
+   <!--<link rel="stylesheet" href="js/Control.OSMGeocoder.css" />-->
+
+  <!--si añadimos directamente 3.1-->
+    <script src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.css" />
+
+
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+        #map {
+          height: 100%;
+          width: 100%;
+        }
+       </style>
+        <script>
+            var map,capa1;
+            function init(){
+                map = L.map("map",{
+                center:[41.6863, 1.8382],
+                zoom:8
+                });
+                capa1= L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+                maxZoom : 19,
+                minZoom : 1,
+                attribution : "OSM"
+                });
+                capa1.addTo(map);
+                //añadir plugin
+                var osmGeocoder = new L.Control.OSMGeocoder({placeholder: 'Buscar lugar...'});
+                    map.addControl(osmGeocoder);
+
+            }
+            </script>
+    </head>
+    <body onLoad="init()">
+        <div id="map"></div>
+    </body>
+    </html>

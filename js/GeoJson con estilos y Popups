@@ -1,0 +1,49 @@
+var comarcasPoligonoStylePop = new L.GeoJSON.AJAX('datos/comarcas.geojson', {
+            style: function (feature) {
+                return {
+
+                    fillColor: "#fab81e",
+                    color: "#ffffff",
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.5
+                }
+            },
+                onEachFeature: function (feature, layer) {
+                    popupContentPol = "<b>" + feature.properties.NOM + "</b>";
+                    layer.bindPopup(popupContentPol);
+                },
+
+        }).addTo(map);
+
+
+        var farmaciasPuntoStylePop = new L.GeoJSON.AJAX('datos/farmacias.geojson', {
+
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    radius: 6,
+                    fillColor: "#00ff00",
+                    color: "#ffffff",
+                    weight: 3,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                })
+            },
+            onEachFeature: function (feature, layer) {
+                popupContentP = "<b>" + feature.properties.EQUIPAMENT + "</b>";
+                layer.bindPopup(popupContentP);
+            },
+        }).addTo(map);
+
+        var carrilsBiciLineaStylePop = new L.GeoJSON.AJAX('datos/carrils-bici.geojson', {
+            style: function (feature) {
+                return {
+                    color: "#d607f2",
+                    weight: 6
+                }
+            },
+            onEachFeature: function (feature, layer) {
+                popupContentL = "<b>" + feature.properties.TOOLTIP + "</b>";
+                layer.bindPopup(popupContentL);
+            },
+        }).addTo(map);

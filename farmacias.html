@@ -8,26 +8,35 @@
         <meta name="robots" content="index,follow" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
- 
-        <script src="https://calvinmetcalf.github.io/leaflet-ajax/dist/leaflet.ajax.js'
+
+        <script src="https://calvinmetcalf.github.io/leaflet-ajax/dist/leaflet.ajax.js"></script>
+
+        <script src="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.js"></script>
+        <link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.css" />
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
 
         <link rel="stylesheet" href="css/estilobase.css" />
         <script src="js/mapabase.js"></script>
-                
         <script src="js/farmacias.js"></script>
-
- <script>
-        function initMapaFarmacias(){
-            init();
-            addDatosFarmacias();
-        }
-    </script>
+        <script>       
+            function initMapaFarmacias(){
+                init();  
+                addDatosFarmacias();            
+            }         
+        </script>
 
     </head>
- 
+
     <body onLoad="initMapaFarmacias()">
         <div id="map"> </div>
     </body>
- 
+
     </html>
- 
+
+
+
+  

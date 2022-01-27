@@ -21,10 +21,10 @@
     <script>
         //Añadir vuestor token y vuestro estilo
         function init() {
-            mapboxgl.accessToken ='pk.eyJ1IjoibWlyeWFtbGF1cmVhbm8iLCJhIjoiY2t5aXhjZTIyMDFreTJ1dWY1MGFpYWl1ZCJ9.rWVNtAiXFnk50QgVRuUQOA';
+            mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/miryamlaureano/ckyiy0fgb4kxa15pwyuwzw1t6',
+                style: 'mapbox://styles/gismasterm2/ckjmupbtl28od19k9rmflcgxf',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 attributionControl: false

@@ -32,6 +32,13 @@
             map.addControl(new mapboxgl.AttributionControl({compact: true}));
             map.addControl(new mapboxgl.NavigationControl());
 
+            map.addControl(new mapboxgl.GeolocateControl());
+
+            var marker = new mapboxgl.Marker()
+            .setLngLat([2.161648, 41.3977])
+            .setPopup(new mapboxgl.Popup().setHTML('<h3>Hola</h3>'))
+            .addTo(map);
+
 
             map.on('load', function () {
                 map.addSource("viasciclables_source", {

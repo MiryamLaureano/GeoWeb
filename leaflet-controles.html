@@ -59,6 +59,9 @@
               controlCapas = L.control.layers(baseMaps, overlayMaps);
               controlCapas.addTo(map);
   
+              controlCapas = L.control.layers(baseMaps, overlayMaps,{collapsed:false}); 
+              controlCapas.addTo(map);
+
               controlEscala = L.control.scale();
               controlEscala.addTo(map);
           }

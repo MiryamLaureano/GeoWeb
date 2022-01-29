@@ -5,7 +5,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
-    <style>
+        <style>
         body {
             margin: 0;
             padding: 0;
@@ -21,7 +21,8 @@
     <script>
         //Añadir vuestor token y vuestro estilo
         function init() {
-            mapboxgl.accessToken ='mapbox://styles/miryamlaureano/ckyxi3pfo001d14rhat63wfy2';
+            mapboxgl.accessToken =
+            'pk.eyJ1IjoibWlyeWFtbGF1cmVhbm8iLCJhIjoiY2t5aXhjZTIyMDFreTJ1dWY1MGFpYWl1ZCJ9.rWVNtAiXFnk50QgVRuUQOA';
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/miryamlaureano/ckyxi3pfo001d14rhat63wfy2',
@@ -29,52 +30,7 @@
                 zoom: 17,
                 attributionControl: false
             });
-            map.addControl(new mapboxgl.AttributionControl({compact: true}));
-            map.addControl(new mapboxgl.NavigationControl());
-
-
-            map.on('load', function () {
-                map.addSource("viasciclables_source", {
-                    type: "vector",
-                    url: "mapbox://gismasterm2.25lhjr43" //poner mapbox://vuestro id
-                }); //fin map source
-
-                map.addLayer({
-                    id: "viasciclables",
-                    type: "line",
-                    source: "viasciclables_source",
-                    'source-layer': "VIAS CICLABLES", //poner vuestro titulo capa
-                    paint:{
-                        'line-color':"#00ff00",
-                        "line-width":3
-                    }
-                });
-            });
-
-
-             map.on('click','viasciclables',function(e){
-
-                    var text = "";
-                    //console.info(e);
-                    for (key in e.features[0].properties){
-
-                      text += "<b>"+key+"</b>:"+e.features[0].properties[key]+"<br>";
-                    }
-                    new mapboxgl.Popup()
-                        .setLngLat(e.lngLat)
-                        .setHTML(text)
-                        .addTo(map);
-
-                    });
-
-                  map.on('mouseenter', 'viasciclables', function() {
-                      map.getCanvas().style.cursor = 'pointer';                    
-                  });
-
-                  map.on('mouseleave', 'viasciclables', function() {
-                     map.getCanvas().style.cursor = '';                    
-                  });
-
+                      
 
         }
     </script>

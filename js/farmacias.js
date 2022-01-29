@@ -47,4 +47,5 @@ function addDatosFarmacias() {
         map.addControl(searchControl);
 
 
+      
 } //fin funcion

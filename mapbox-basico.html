@@ -43,7 +43,7 @@
             map.on('load', function () {
                 map.addSource("viasciclables_source", {
                     type: "vector",
-                    url: "mapbox://gismasterm2.25lhjr43" //poner mapbox://vuestro id
+                    url: "mapbox://miryamlaureano" //poner mapbox://vuestro id
                 }); //fin map source
 
                 map.addLayer({
@@ -58,32 +58,33 @@
                 });
             });
 
+           
+            map.on('click','viasciclables',function(e){
 
-             map.on('click','viasciclables',function(e){
+                var text = "";
+                //console.info(e);
+                for (key in e.features[0].properties){
 
-                    var text = "";
-                    //console.info(e);
-                    for (key in e.features[0].properties){
+                text += "<b>"+key+"</b>:"+e.features[0].properties[key]+"<br>";
+            }
 
-                      text += "<b>"+key+"</b>:"+e.features[0].properties[key]+"<br>";
-                    }
-                    new mapboxgl.Popup()
-                        .setLngLat(e.lngLat)
-                        .setHTML(text)
-                        .addTo(map);
+            new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(text)
+                .addTo(map);
 
-                    });
+            });
 
-                  map.on('mouseenter', 'viasciclables', function() {
-                      map.getCanvas().style.cursor = 'pointer';                    
-                  });
+            map.on('mouseenter', 'viasciclables', function() {
+            map.getCanvas().style.cursor = 'pointer';                    
+            });
 
-                  map.on('mouseleave', 'viasciclables', function() {
-                     map.getCanvas().style.cursor = '';                    
-                  });
+            map.on('mouseleave', 'viasciclables', function() {
+            map.getCanvas().style.cursor = '';                    
+            });
 
 
-        }
+    }
     </script>
 </head>
 

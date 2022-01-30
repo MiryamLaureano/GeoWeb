@@ -8,17 +8,18 @@
     <link href='css/estilobase.css' rel='stylesheet' />
 
     <script src='js/3d.js'></script>
+    <script src='js/rutas.js'></script>
     <script>
         //Añadir vuestor token!!
         var map;
         function init() {
             mapboxgl.accessToken =
-                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+                'pk.eyJ1IjoibWlyeWFtbGF1cmVhbm8iLCJhIjoiY2t5aXhjZTIyMDFreTJ1dWY1MGFpYWl1ZCJ9.rWVNtAiXFnk50QgVRuUQOA';
              map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/satellite-streets-v10',
                 center: [1.77878, 41.60044],
-                zoom: 14,,
+                zoom: 14,
                 attributionControl: false,
                 pitch: 45,
                 hash: true
@@ -29,6 +30,7 @@
 
             map.on('load', function () {
              add3D('mapbox-dem');
+             addRutas();
 
             }); //fin onload         
 
@@ -37,8 +39,15 @@
     </head>
 
     <body onload="init()">
-
+        <div class="panelTopIzquierda">
+            <select onChange="zoomToRutas(this.value)">
+                <option selected value="14/41.60044/1.77878">Ruta 1</option>
+                <option value="12.96/41.76589/2.30274">Ruta 2</option>
+                <option value="13.04/42.31892/3.26054">Ruta 3</option>
+            </select>
+         </div>
         <div id="map"></div>
     </body>
 
     </html>
+

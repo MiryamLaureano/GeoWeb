@@ -46,10 +46,10 @@ function addEdificiosCapa() {
 
 }
 
-    function filtrarEdificios(valor) {
-    map.setFilter("edificios", [">", "numberOfFl", parseInt(valor)]);
+        function filtrarEdificios(valor) {
+        map.setFilter("edificios", [">", "numberOfFl", parseInt(valor)]);
 
-    document.getElementById("altura").innerHTML = "Más de  <b>" + valor + "</b> pisos";
+     document.getElementById("altura").innerHTML = "Más de  <b>" + valor + "</b> pisos";
 
 
     function addPopupToMapEdificios(nombreCapa) {

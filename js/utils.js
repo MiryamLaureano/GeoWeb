@@ -47,3 +47,42 @@ function addPopupToMap(nombreCapa) {
       popup.remove();
     });
   }// fin funcion
+
+  
+
+
+
+  var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+    });
+
+function addPopupToMap(nombreCapa) {
+
+    map.on('mousemove', nombreCapa, function (e) {
+
+      var text = "";
+      //console.info(e);
+      for (key in e.features[0].properties) {
+
+        text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>";
+      }
+
+      popup.setLngLat(e.lngLat)
+        .setHTML(text)
+        .addTo(map);
+
+    });
+
+    map.on('mouseenter', nombreCapa, function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    map.on('mouseleave', nombreCapa, function () {
+      map.getCanvas().style.cursor = '';
+      popup.remove();
+    });
+
+  }// fin funcion
+
+  

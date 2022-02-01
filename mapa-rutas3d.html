@@ -14,7 +14,7 @@
         var map;
         function init() {
             mapboxgl.accessToken =
-                'pk.eyJ1IjoibWlyeWFtbGF1cmVhbm8iLCJhIjoiY2t5aXhjZTIyMDFreTJ1dWY1MGFpYWl1ZCJ9.rWVNtAiXFnk50QgVRuUQOA';
+                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
              map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/satellite-streets-v10',
@@ -31,8 +31,23 @@
             map.on('load', function () {
              add3D('mapbox-dem');
              addRutas();
+            rotarCamara(0);
 
-            }); //fin onload         
+            }); //fin onload      
+
+            map.on("click",function(e){
+                finalRotarCamara()
+
+                });
+            map.on("zoomstart",function(e){
+                finalRotarCamara()
+
+                });  
+
+            map.on("zoomend",function(e){
+                rotarCamara(0);
+
+            });          
 
         } // final init
     </script>
@@ -50,4 +65,3 @@
     </body>
 
     </html>
-

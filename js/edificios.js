@@ -2,7 +2,7 @@ function addEdificiosCapa() {
 
     map.addSource("edificios_source", {
         "type": "vector",
-        "url": "mapbox://gismasterm2.2gkan1gt"  // Nuestor ID Tileset
+        "url": "mapbox://geoweb"  // Nuestor ID Tileset
 
     }); //fin map source
 

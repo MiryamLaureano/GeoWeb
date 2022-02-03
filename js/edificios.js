@@ -2,7 +2,7 @@ function addEdificiosCapa() {
 
     map.addSource("edificios_source", {
         "type": "vector",
-        "url": "mapbox://geoweb"  // Nuestor ID Tileset
+        "url": "mapbox://styles/miryamlaureano/ckz0huany002014olhwokm5bl"  // Nuestor ID Tileset
 
     }); //fin map source
 
@@ -11,7 +11,7 @@ function addEdificiosCapa() {
     "id": "edificios",
     "type": "fill-extrusion",
     "source": "edificios_source",
-    "source-layer": "construcciones-324xyz", // Nuestro nombre Tileset
+    "source-layer": "construcciones-9361bl", // Nuestro nombre Tileset
     "maxzoom": 21,
     "minzoom": 15,
    // "filter": [">", "numberOfFl", 0],

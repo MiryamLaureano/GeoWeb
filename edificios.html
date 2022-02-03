@@ -13,13 +13,13 @@
     <script src='js/edificios.js'></script>
     <script>
         //Añadir vuestor token y/o estilo !!
-        var map;
+       var Map;
         function init() {
             mapboxgl.accessToken =
                 'pk.eyJ1IjoibWlyeWFtbGF1cmVhbm8iLCJhIjoiY2t5aXhjZTIyMDFreTJ1dWY1MGFpYWl1ZCJ9.rWVNtAiXFnk50QgVRuUQOA';
              map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/mapbox/dark-v10',
+                style: 'mapbox://styles/miryamlaureano/ckz0huany002014olhwokm5bl',
                 center: [2.16859, 41.3954],
                 zoom: 15,
                 attributionControl: false,
@@ -52,6 +52,7 @@
 
        <label id="altura">Más de 0 pisos</label>
         <input  onChange="filtrarEdificios(this.value)" id="slider" type="range" min="1" max="50" step="1" value="0" />
+    
     </div>
     <div id="map"></div>
     </body>

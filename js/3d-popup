@@ -24,6 +24,9 @@ function addPopupToMapEdificios3D(nombreCapa) {
                 .setLngLat(e.lngLat)
                 .setHTML(text)
                 .addTo(map);
+
+
+                
         }
     });
     map.on('mouseenter', nombreCapa, function () {

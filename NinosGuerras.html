@@ -111,7 +111,7 @@
             }
         }
 
-        /* Fix issue on mobile browser where scroll breaks  */
+       
         .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
         .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
             touch-action: unset;
@@ -129,19 +129,15 @@
 </head>
 <body>
 
-
-   
-
-
-<div id="map"></div>
-<div id="story"></div>
-<script src="./config-ninos-guerras.js"></script>
+    <div id="map"></div>
+    <div id="story"></div>
+    <script src="./config-ninos-guerras.js"></script>
 
 
 
 
 
-<script>
+    <script>
 var layerTypes = {
     'fill': ['fill-opacity'],
     'line': ['line-opacity'],
@@ -158,9 +154,6 @@ var alignments = {
     'right': 'righty',
     'full': 'fully'
 }
-
-
-
 
 
 function getLayerPaintType(layer) {
@@ -290,7 +283,7 @@ if (config.showMarkers) {
     marker.setLngLat(config.chapters[0].location.center).addTo(map);
 }
 
-// instantiate the scrollama
+
 var scroller = scrollama();
 
 map.on("load", function() {
@@ -301,10 +294,9 @@ map.on("load", function() {
             'tileSize': 512,
             'maxzoom': 14
         });
-        // add the DEM source as a terrain layer with exaggerated height
+       
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
 
-        // add a sky layer that will show when the map is highly pitched
         map.addLayer({
             'id': 'sky',
             'type': 'sky',
@@ -316,7 +308,6 @@ map.on("load", function() {
         });
     };
 
-    // setup the instance, pass callback functions
     scroller
     .setup({
         step: '.step',
@@ -356,7 +347,6 @@ map.on("load", function() {
     });
 });
 
-// setup resize event
 window.addEventListener('resize', scroller.resize);
 
 </script>

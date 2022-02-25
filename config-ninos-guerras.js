@@ -11,14 +11,13 @@ var config = {
     footer: 'Source: Wikipedia, Amnistía Internacional, Cruz Roja Internacional, UNICEF, SIPRI, EOM, Save the Children, Aldeas Infantiles, ACNUR. ',
   
        
-   
-    chapters: [
+       chapters: [
 
         {
             id: 'Introduccion',
             alignment: 'centered', 
             hidden: false,
-            title: 'LOS PEORES LUGARES DEL MUNDO PARA SER NIÑ@S',
+            title: '..... ¿Es la paz mundial una utopía?',
             image: 'https://imagenes.elpais.com/resizer/OkHIAN74p4UdGuS8bjrEK0cgtjg=/414x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/IFSVMIPTTJFIJCXKCLN3VZRXEI.jpg',
             location: {
                 center: [30, 10],
@@ -27,8 +26,7 @@ var config = {
                 bearing: -13.2
             },
            
-        }, 
-        {
+        },{
             id: 'primera parte',
             alignment: 'centered', 
             hidden: false,
@@ -40,8 +38,7 @@ var config = {
                 bearing: -13.2
             },
            
-        },
-        {
+        },{
             id: 'continente',
             alignment: 'center', 
             hidden: false,
@@ -53,8 +50,7 @@ var config = {
                 bearing: -13.2
             },
            
-        },
-        {
+        },{
             id: 'Rohingya – Rakáin',
             alignment: 'left', 
             hidden: false,
@@ -74,8 +70,8 @@ var config = {
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
-        },
-        {
+        
+        },{
             id: 'Afganistán',
             alignment: 'right', 
             hidden: false,
@@ -93,9 +89,8 @@ var config = {
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
-        },
-       
-        {
+        
+        },{
             id: 'Siria',
             alignment: 'left',
             hidden: false,
@@ -131,10 +126,7 @@ var config = {
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
-        },
-        
-        
-        {
+        },{
             id: 'Yemen',
             alignment: 'left',
             hidden: false,
@@ -165,9 +157,7 @@ var config = {
                 pitch: 60,
                 bearing: 50
             },
-        
-        
-        
+            
         }, {
             id: 'Somalia',
             alignment: 'right', 
@@ -204,17 +194,10 @@ var config = {
             rotateAnimation: true,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+              
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+             
             ]
        },{
             id: 'República Centroafricana',
@@ -409,10 +392,11 @@ var config = {
         
          },{
             id: 'EEUU presidente 1',
-            alignment: 'right', 
+            alignment: 'left', 
             hidden: false,
             title: 'Estados Unidos',
             image: 'https://i.blogs.es/961b91/barack-obama-saudies/1024_2000.jpg' ,
+            description: 'Obama, premio Nobel de la paz, es el presidente que más armas ha vendido desde la IIGM  ',
             location: {
                 center: [-77.055833, 38.871111],
                 zoom: 14,
@@ -427,7 +411,7 @@ var config = {
           
         
          },{
-            id: 'EEUU presidente 1',
+            id: 'EEUU comentario 1',
             alignment: 'centered', 
             hidden: false,
             title: 'Estados Unidos',
@@ -447,7 +431,7 @@ var config = {
         
          },{
             id: 'EEUU presidente 2',
-            alignment: 'left', 
+            alignment: 'right', 
             hidden: false,
             title: 'Estados Unidos',
             image: 'https://static.dw.com/image/43130321_303.jpgg',
@@ -465,7 +449,7 @@ var config = {
           
         
          },{
-            id: 'EEUU presidente 2',
+            id: 'EEUU comentario 2',
             alignment: 'centered', 
             hidden: false,
             title: 'Estados Unidos',
@@ -485,11 +469,31 @@ var config = {
         
          },{
             id: 'drone eeuu',
-            alignment: 'right', 
+            alignment: 'left', 
             hidden: false,
             title: 'Estados Unidos',
             image: 'https://i.blogs.es/a21c02/drone/1024_2000.jpg',
             description: 'Drones americanos en Yemen. ',
+            location: {
+                center: [-77.055833, 38.871111],
+                zoom: 14,
+                pitch: 60,
+                bearing: -13.2
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+          
+        
+         },{
+            id: 'soldados',
+            alignment: 'right', 
+            hidden: false,
+            title: 'Estados Unidos',
+            image: 'https://ichef.bbci.co.uk/news/800/cpsprodpb/D8EC/production/_101223555_gettyimages-632653026.jpg.webp',
+            description: 'Arabia Saudita es el principal comprador de armamento estadounidense.  ',
             location: {
                 center: [-77.055833, 38.871111],
                 zoom: 14,
@@ -523,13 +527,53 @@ var config = {
           
         
          },{
-            id: 'comentario',
+            id: 'submarino',
             alignment: 'right', 
+            hidden: false,
+            title: 'Francia',
+            image: 'https://ichef.bbci.co.uk/news/800/cpsprodpb/12324/production/_101223547_gettyimages-912459584.jpg.webp',
+            description: 'India está construyendo seis submarinos como el de la imagen, un diseño franco-español. ',
+            location: {
+                center: [2.294479, 48.858296],
+                zoom:17,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+          
+        
+         },{
+            id: 'rafale',
+            alignment: 'left', 
+            hidden: false,
+            title: 'Francia',
+            image: 'https://greekcitytimes.com/wp-content/uploads/2020/12/1-6-8.jpg',
+            description: 'Avión de combate Rafale de fabricación francesa. ',
+            location: {
+                center: [2.294479, 48.858296],
+                zoom:17,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+          
+        
+         },{
+            id: 'comentario',
+            alignment: 'centered', 
             hidden: false,
             title: 'Francia',
             description: 'En el caso de Francia, sus exportaciones de armamento registraron el pico quinquenal más alto desde 1990, y representaron el 7,9% de las exportaciones de armas a nivel global, con un incremento del 72% versus el período del 2010 al 2014.<p>“La industria de armas francesa se ha visto beneficiada por la demanda de Egipto, Qatar y la India”, afirma Diego Lopes Da Silva, investigador del SIPRI.  </p> ',
             location: {
-                center: [2.294479, 48.858296],
+                center:[2.294479, 48.858296],
                 zoom:17,
                 pitch: 0,
                 bearing: 0
@@ -580,12 +624,8 @@ var config = {
             onChapterExit: []
           
         
-
-
-
-
          },{
-            id: '3 nave 1',
+            id: '3 comentario',
             alignment: 'centered', 
             hidden: false,
             title: 'Alemania',
@@ -603,10 +643,6 @@ var config = {
             onChapterExit: []
           
         
-
-
-
-
          },{
             id: '3 nave 2',
             alignment: 'left', 
@@ -780,11 +816,7 @@ var config = {
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
-          
-
-
-
-            
+                 
         
          },{
             id: '8 presidente',
@@ -804,9 +836,7 @@ var config = {
             onChapterEnter: [],
             onChapterExit: []
           
-        
-         },
-         
+        }, 
          {
             id: '8 comentario',
             alignment: 'centered', 
@@ -909,7 +939,7 @@ var config = {
             id: 'parte final',
             alignment: 'center', 
             hidden: false,
-            description: '¿Cómo acabar con las guerras que están acabando con los <strong>inocentes</strong> de una casa, de una ciudad y de un país?  Hoy se ha iniciado la invasión de Ucrania por Rusia, todos los motivos para iniciar una guerra son sólo pretextos o como en éste caso mentiras, el fin es la búsqueda de escenarios para fortalecer su negocio armamentista, o de narcotráfico, o de explotación en minas o la explotación sexual de mujeres y niños.  Hoy mismo las naciones europeas o mejor dicho sus gobernantes, rechazan la acción de Rusia, rechazan sus actos violentos y se solidarizan con el puelo Ucraniano. Pero sólo harán eso, por supuesto no dejarán de fabricar armamento bélico, no dejarán a un lado sus negocios tan rentables.  ',
+            description: '¿Cómo acabar con las guerras que están acabando con los <strong>inocentes</strong> de una casa, de una ciudad y de un país?  Hoy se ha iniciado la invasión de Ucrania por Rusia, todos los motivos para iniciar una guerra son sólo pretextos o como en éste caso mentiras, el fin es la búsqueda de escenarios para fortalecer su negocio armamentista, o de narcotráfico, o de explotación en minas o la explotación sexual de mujeres y niños.  Hoy mismo las naciones europeas o mejor dicho sus gobernantes, rechazan la acción de Rusia, rechazan sus actos violentos y se solidarizan con el pueblo Ucraniano. Pero sólo harán eso, por supuesto no dejarán de fabricar armamento bélico, no dejarán a un lado sus negocios tan rentables.  ',
             location: {
                 center: [30, 10],
                 zoom: 1.5,
@@ -927,6 +957,32 @@ var config = {
             hidden: false,
             title: 'SIN FUTURO, NO SÓLO VIVEN EL PEOR LUGAR, VIVEN EN EL PEOR MUNDO PARA SER NIÑ@S',
             image: 'https://www.unicef.org/sites/default/files/styles/hero_mobile/public/20180914_Yemen_PB.jpg?itok=tAFQVmbA',
+            location: {
+                center: [30, 10],
+                zoom: 1.5,
+                pitch: 10,
+                bearing: -13.2
+            },
+           
+    
+        },{
+            id: 'final',
+            alignment: 'centered', 
+            hidden: false,
+            title: '¿Es la paz mundial una utopía?  ',
+            location: {
+                center: [30, 10],
+                zoom: 1.5,
+                pitch: 10,
+                bearing: -13.2
+            },
+           
+    
+        },{
+            id: 'conclusion',
+            alignment: 'centered', 
+            hidden: false,
+            title: 'El incremento de la violencia y los conflictos en diversas partes del mundo revelan la importancia de fomentar la reflexión y la acción para construir y fortalecer una cultura de paz en la sociedad. Es importante tener conciencia y conocimiento sobre las guerras, sus efectos reales, los intereses que estan presenten en ellas, la procedencia de armamento, el negocio armamentista de algunos países, tener conciencia sobre ello "nos" ayudaría a trazar el camino para alzanzar la cultura de paz en las sociedades. Porque : ¿cómo abordar un problema desde el desconocimiento?',
             location: {
                 center: [30, 10],
                 zoom: 1.5,
